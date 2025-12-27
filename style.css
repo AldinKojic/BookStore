@@ -1,0 +1,88 @@
+body {
+  margin: 0;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: bisque;
+  height: 50px;
+}
+.book-content {
+  background-color: aqua;
+  width: 400px;
+ max-height: 600px;
+  margin: 50px;
+  border-radius: 15px;
+}
+
+.book-img {
+  height: 200px;
+}
+
+.img-container {
+  width: 100%;
+  border-bottom: 4px solid #000;
+  border-top: 4px solid #000;
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+}
+
+.book-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.book-price-like {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.book-price {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.book-likes {
+  font-size: 18px;
+}
+
+.meta-content {
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 5px;
+}
+
+.author {
+  display: flex;
+  flex-direction: column;
+  margin: 3px;
+  font-weight: bold;
+}
+
+.comments-wrapper {
+      padding-left: 20px;
+  padding-right: 20px;
+  border-top: 4px solid #000;
+}
+
+.write-comment{
+    display: flex;
+    justify-content: space-between;
+        gap: 5px;
+            padding-bottom: 15px;
+}
+
+input{
+    width: 100%;
+    border-bottom: 4px solid #000;
+    height: 20px;
+}
+.send-comment{
+cursor: pointer;
+}
+
+
