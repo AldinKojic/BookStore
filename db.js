@@ -38,7 +38,20 @@ let books = [
       "price": 14.50,
       "publishedYear": 2021,
       "genre": "Fantasy",
-      "comments": []
+     "comments": [
+     {
+          "name": "LeserPeter",
+          "comment": "Die Handlung war fesselnd und die Charaktere unglaublich lebendig dargestellt."
+           },
+           {
+             "name": "FantasyLena",
+           "comment": "Sehr stimmungsvolle Welt mit vielen Details. Der Mittelteil hätte etwas straffer sein können."
+  },
+  {
+    "name": "BuchNerd92",
+    "comment": "Ein gelungener Fantasyroman mit eigener Handschrift. Hat mich positiv überrascht."
+  }
+]
     },
     {
       "name": "Die Farben des Himmels",
@@ -173,3 +186,5 @@ let books = [
       ]
     }
   ]
+
+  

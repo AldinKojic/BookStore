@@ -5,45 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Bookstore</title>
     <link rel="stylesheet" href="./style.css" />
+    <script src="./db.js"></script>
+
+    <script src="./eachBook/firstbook.js"></script>
     <script src="./script.js"></script>
   </head>
-  <body>
-    <header class="header-container">
-      Homie's Bookstore - get my favorite books
-    </header>
-    <main>
-      <article class="book-content">
-        <header class="book-header">
-          <h2>First Book Name</h2>
-        </header>
-        <div class="img-container">
-          <img class="book-img" src="./img/blank-book-mockup.jfif" alt="" />
-        </div>
-        <div class="meta-content">
-          <div class="book-price-like">
-            <p class="book-price">12.30</p>
-            <p class="book-likes">890</p>
-          </div>
-
-          <p class="author">Author</p>
-          <p class="author">Erscheinungsjahr</p>
-          <p class="author">Genre</p>
-        </div>
-        <div class="comments-wrapper">
-          <h3>Komentare:</h3>
-
-          <p>commentuser]</p>
-          <div class="write-comment">
-            <input
-              type="text"
-              id="fname"
-              name="firstname"
-              placeholder="Schreibe dein Kommentar..."
-            />
-            <button class="send-comment">x</button>
-          </div>
-        </div>
-      </article>
-    </main>
+  <body onload="renderBooks()">
+    <div class="wrapper">
+      <header class="header-container">
+       <span class="brand-accent">Homie</span>'s Bookstore – get my favorite books
+      </header>
+      <main class="books-template" id="content" id="first-books-templ"></main>
+    </div>
+    <footer class="header-container"></footer>
   </body>
 </html>
+
