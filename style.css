@@ -219,3 +219,13 @@ input {
 .shadow-wrapper::after {
   pointer-events: none;
 }
+
+.wrapper{
+  max-width: 1440px;
+
+}
+
+.content-wrapper{
+  display: flex;
+  flex-wrap: wrap;
+}

@@ -8,12 +8,13 @@ function FirstBookTemplate(i) {
           <h2> ${books[i].name}</h2>
         </header>
         <div class="img-container">
-          <img class="book-img" src="./img/book.png" alt="" />
+          <img id="likes"  class="book-img" src="./img/book.png" alt="" />
         </div>
         <div class="meta-content">
           <div class="book-price-like">
-            <p class="book-price">${books[i].price}<span class="currency-symbol">€</span></p>
-            <p  onclick="incrementValue()" class="book-likes">${books[i].likes}<img class="like-symbol" src="./img/heart.png" alt="heart-symbol" ></p>
+            <p  class="book-price">${books[i].price}<span class="currency-symbol">€</span></p>
+            <p class="book-likes"> <span id="likeCount-${i}">${books[i].likes}</span><img onclick="addLike(${i})"
+                 class="like-symbol" src="./img/heart.png" alt="heart-symbol" ></p>
           </div>
 
           <div class="meta-grid">
@@ -39,22 +40,21 @@ function FirstBookTemplate(i) {
           <div class="scrollable-container">
             <div class="meta-grid">
               <div class="meta-labels">
-            <p>:</p>
+              <p id="commenNAME${i}"></p>
               </div>
 
               <div class="meta-values">
-                <p>:</p>
-                <p>:</p>
-                <p>:</p>
-                <p>:</p>
+             
               </div>
               <div class="meta-data" >
-               <p>${books[i].comments}</p>
-                 <div id="demo"></div>
+             
+               <p id="Kommentar${i}" ></p>
+              
+                 <div id="demo${i}"></div>
                  </div>                                  
-              </div> 
-          </div>
-          <div class="write-comment">
+               </div> 
+             </div>
+              <div class="write-comment">
             <input
               type="text"
               id="pushComment"
@@ -64,8 +64,9 @@ function FirstBookTemplate(i) {
             <button  onclick="addComment()" class="send-comment"><img  class="send-symbol" src="./img/send-symbol.png" alt="send-symbol"></button>
           </div>
         </div>
-     </div>
+  
       </article>
 </section>
+
     `;
 }

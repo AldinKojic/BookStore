@@ -1,79 +1,59 @@
 function renderBooks() {
   let content = document.getElementById("content");
-  for (let index = 0; index < books.length; index++) {
-    content.innerHTML += FirstBookTemplate(index);
+  for (let indexBook = 0; indexBook < books.length; indexBook++) {
+    content.innerHTML += FirstBookTemplate(indexBook);
 
-  
+    let comment = document.getElementById("Kommentar" + [indexBook]);
 
-  
+    for (
+      let indexComment = 0;
+      indexComment < books[indexBook].comments.length;
+      indexComment++
+    ) {
+      comment.innerHTML += pushComment(indexBook, indexComment);
+    }
+
+    let commentName = document.getElementById("commenNAME" + [indexBook]);
+    for (
+      let indexName = 0;
+      indexName < books[indexBook].comments.length;
+      indexName++
+    ) {
+      commentName.innerHTML += pushName(indexBook, indexName);
+    }
+        
   }
+
 }
 
-// function renderComment(){
-// let comment = document.getElementById("Kommentar")
-// for (let index = 0; index < books[index].comments.comment,length; index++) {
-//     comment.innerHTML += pushComment()
-// }
-//  }
-// function pushComment(){
-//     return`<p>${books[0].comments.comment}</p>`
-//  }
+function pushComment(indexBook, indexComment) {
+  return `
+  <p>:${books[indexBook].comments[indexComment].comment}</p>`;
+}
 
+function pushName(indexBook, indexName) {
+  return `<p>${books[indexBook].comments[indexName].name}</p>`;
+}
 
 
 function addComment() {
   let writeCommentRef = document.getElementById("pushComment").value;
   let demoRef = document.getElementById("demo");
 
-  
   demoRef.innerHTML += `<p>${writeCommentRef}</p>`;
   document.getElementById("pushComment").value = "";
-
-}
-  addComment()
-
-
-// function like() {
-//   likeRef = document.getElementById("getLike"):
-//   likeRef.innerHTML ="";
-
-  
-// }
-
-function incrementValue()
-{
-    var value = parseInt(document.getElementById('number').value, 10);
-    value = isNaN(value) ? 0 :books[i].price;
-    value++;
-    document.getElementById('number').value = value;
-    
 }
 
 
 
-//  function addComment() {
-//   let writeCommentRef = document.getElementById("pushComment").value;
-//   document.getElementById("demo").innerHTML = writeCommentRef;
+function addLike(index) {
+  if (books[index].liked === false) {
+    books[index].likes++;
+    books[index].liked = true;
+  } else {
+    books[index].likes--;
 
-function commentUser() {
-  const comments = books[1].comments;
-
-  for (let i = 0; i < comments.length; i++) {
-    console.log(comments[i].comment);
+    books[index].liked = false;
   }
+  document.getElementById(`likeCount-${index}`).innerHTML = books[index].likes;
 }
-
-// function renderComments(index) {
-//   const container = document.getElementById("comments");
-//   container.innerHTML = "";
-//   const comments = books[index].comments;
-//   for (let i = 0; i < comments.length; i++) {
-//     container.innerHTML += `<p>${comments[i].comment}`;
-//   }
-// }
-// commentUser();
-// renderComments();
-
-
-
- 
